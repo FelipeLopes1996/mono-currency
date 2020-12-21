@@ -1,10 +1,16 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-const App = () => {
+import Routes from './routes'
+import AuthProvider from './shared/context/auth'
+
+const App: React.FC = () => {
   return (
-    <div>
-      <h2>oi</h2>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
 
