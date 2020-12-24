@@ -1,15 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Container, Nav, Link, Tittle } from './style'
 
-const Home: React.FC<any> = () => {
+import Switch from '../../../shared/components/switch'
+
+const Home: React.FC = () => {
   return (
-    <div>
-      <Link to="/signin">Sign In</Link>
-      <br />
-      <Link to="/signup">Sign Un</Link>
-      <br />
-      <h2>Home</h2>
-    </div>
+    <Container>
+      <Nav>
+        <Link to="/signin">Sign In</Link>
+        <Link to="/signup">Sign Up</Link>
+      </Nav>
+      <Tittle>Home</Tittle>
+      <Switch />
+    </Container>
   )
 }
 

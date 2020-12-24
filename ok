@@ -1,0 +1,21 @@
+[33mcommit e606f21820da49cc9ab77529768449f8d07ecc40[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Felipe de Lima Lopes <felipe.lopes@pampa.compasso>
+Date:   Sun Dec 20 21:39:10 2020 -0300
+
+    create component and routes
+    
+    web
+
+[33mcommit 6b1a00ff9060a1c6e1df651c211e2c9e8d63cc85[m
+Author: Felipe de Lima Lopes <felipe.lopes@pampa.compasso>
+Date:   Sat Dec 19 16:34:40 2020 -0300
+
+    chore: configurte app
+    
+    web
+
+[33mcommit 8ffb52e0b2329e1adb9eea9c56cb9f5c02c00b23[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: FelipeLopes1996 <60985486+FelipeLopes1996@users.noreply.github.com>
+Date:   Sat Dec 19 15:55:26 2020 -0300
+
+    Initial commit

@@ -1,12 +1,21 @@
 import React from 'react'
 
+import LayoutProvider from '../context/layout'
 import { IProps } from '../interface/props'
+
+import Header from '../components/header'
+import NavLeft from '../components/navleft'
+import Main from '../components/main'
+import Footer from '../components/footer'
 
 const PrivateLayout: React.FC<IProps> = ({ children }) => {
   return (
-    <div style={{ color: 'white', backgroundColor: 'black' }}>
-      <div>{children}</div>
-    </div>
+    <LayoutProvider>
+      <Header />
+      <NavLeft />
+      <Main>{children}</Main>
+      <Footer />
+    </LayoutProvider>
   )
 }
 
