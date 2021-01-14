@@ -1,6 +1,6 @@
 export interface IFetch {
   method?: any
-  model?: any
+  mode?: any
   cache?: any
   credential?: any
   headers?: any

@@ -1,13 +1,18 @@
 import React, { useContext } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
+import useLoading from '../../../../../shared/hooks/useLoading'
 import { FormConatainer, FormGroup, Label, Input, Button } from './style'
 import { useFormik } from 'formik'
 import { LoginServer } from '../../../server'
 import { AuthContext } from '../../../../../shared/context/auth'
+// import api from '../../../../../shared/constants/api'
+// import { Body } from '../../../../private/dash/style'
 
 const Form: React.FC<RouteComponentProps> = ({ history }) => {
   const [auth, setAuth] = useContext(AuthContext)
+  const [, setLoading] = useLoading()
 
   const formik = useFormik({
     initialValues: {
@@ -31,12 +36,22 @@ const Form: React.FC<RouteComponentProps> = ({ history }) => {
   })
 
   const handlerLogin = async (body: any) => {
-    const { token, profile } = await LoginServer(body)
-    if (token) {
-      setAuth({ ...auth, isAuth: true, token, profile })
-      history.push('/dash')
+    const response = await LoginServer(body)
+    if (!response) {
+      toast.error("it's not Authenticate")
+    } else {
+      const { token, profile } = response
+      if (token) {
+        setLoading()
+        toast.success('Is authenticate!')
+        setAuth({ ...auth, isAuth: true, token, profile })
+        history.push('/dash')
+      } else {
+        toast.error('Something is woring!')
+      }
     }
   }
+
   return (
     <FormConatainer onSubmit={formik.handleSubmit}>
       <FormGroup>

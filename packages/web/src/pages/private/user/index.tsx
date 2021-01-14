@@ -1,10 +1,21 @@
 import React from 'react'
 
+import Table from './components/table'
+import { Container, Header, Body, Link, Title, Icon } from './style'
+
 const User: React.FC = () => {
   return (
-    <div>
-      <h1>User</h1>
-    </div>
+    <Container>
+      <Header>
+        <Title>Header</Title>
+        <Link to="/user/new">
+          <Icon icon={['fas', 'user-plus']} />
+        </Link>
+      </Header>
+      <Body>
+        <Table />
+      </Body>
+    </Container>
   )
 }
 

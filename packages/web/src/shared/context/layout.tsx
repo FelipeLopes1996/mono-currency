@@ -9,8 +9,8 @@ interface Props {
 export const LayoutContext = React.createContext<any>([])
 
 const defaultValue: ILayout = {
-  theme: 'dark',
   nav: false,
+  loading: false,
 }
 
 const Provider: React.FC<Props> = ({ children }) => {

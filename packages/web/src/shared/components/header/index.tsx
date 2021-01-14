@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Fullscreen from '../fullscreen/index'
+import Switch from '../switch'
 
 import Hamburguer from '../hamburguer/index'
 import {
@@ -9,6 +10,7 @@ import {
   WrapToggle,
   WrapFullscreen,
   WrapNav,
+  WrapSwitch,
   Link,
   Logo,
 } from './styles'
@@ -36,6 +38,9 @@ const Header: React.FC = () => {
           Activity
         </Link>
       </WrapNav>
+      <WrapSwitch>
+        <Switch />
+      </WrapSwitch>
     </Content>
   )
 }

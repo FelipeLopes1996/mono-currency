@@ -8,7 +8,7 @@ export const Content = styled.header`
   justify-content: space-between;
   color: ${props => props.theme.fg.light};
   height: var(--header-height);
-  width: 100vw;
+  /* width: 100vw; */
 `
 export const WrapLogo = styled.div`
   color: ${props => props.theme.fg.body};
@@ -19,13 +19,12 @@ export const WrapLogo = styled.div`
   padding: 0.8rem;
   height: var(--header-height);
   width: var(--navleft-width-close);
-  border-right: solid 0.06rem ${props => props.theme.fg.light};
-
+  border-right: solid 0.06rem ${props => props.theme.fg.default};
   &::after {
     content: ' ';
     position: absolute;
     top: calc(var(--header-height) - 0.06rem);
-    background: ${props => props.theme.bg.light};
+    background: ${props => props.theme.fg.default};
     height: 0.06rem;
     width: calc(var(--navleft-width-close) - 0.6rem);
   }
@@ -38,7 +37,7 @@ export const WrapToggle = styled.div`
   align-items: center;
   padding-right: 1rem;
   padding-left: 1rem;
-  border-bottom: solid 0.06rem ${props => props.theme.fg.light};
+  border-bottom: solid 0.06rem ${props => props.theme.fg.default};
   margin-left: 0.3rem;
 `
 
@@ -47,9 +46,9 @@ export const WrapFullscreen = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 0.06rem ${props => props.theme.fg.light};
-  border-left: solid 0.06rem ${props => props.theme.fg.light};
-  border-right: solid 0.06rem ${props => props.theme.fg.light};
+  border-bottom: solid 0.06rem ${props => props.theme.fg.default};
+  border-left: solid 0.06rem ${props => props.theme.fg.default};
+  border-right: solid 0.06rem ${props => props.theme.fg.default};
 `
 
 export const WrapNav = styled.ul`
@@ -58,9 +57,17 @@ export const WrapNav = styled.ul`
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  border-bottom: solid 0.06rem ${props => props.theme.fg.light};
+  border-bottom: solid 0.06rem ${props => props.theme.fg.default};
 `
-
+export const WrapSwitch = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  border-left: solid 0.06rem ${props => props.theme.fg.default};
+  border-bottom: solid 0.06rem ${props => props.theme.fg.default};
+`
 export const Link = styled(NavLink)`
   display: flex;
   flex-direction: row;
@@ -70,7 +77,7 @@ export const Link = styled(NavLink)`
   height: var(--header-height);
   min-width: 4rem;
   font-size: 1rem;
-  color: ${props => props.theme.fg.light};
+  color: ${props => props.theme.fg.default};
   text-decoration: none;
   font-weight: 400;
   text-transform: uppercase;

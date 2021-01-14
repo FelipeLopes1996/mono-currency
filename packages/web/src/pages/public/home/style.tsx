@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
+import { rgba } from 'polished'
 
 export const Container = styled.section`
   padding: 2rem;
@@ -18,7 +19,7 @@ export const Link = styled(LinkRouter)`
   transition: 0.3 all ease-in-out;
 
   &:hover {
-    color: #fff;
+    color: ${props => rgba(props.theme.fg.body, 0.6)};
   }
 `
 

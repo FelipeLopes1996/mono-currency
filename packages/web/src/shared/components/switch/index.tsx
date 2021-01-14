@@ -1,8 +1,18 @@
 import React from 'react'
-import useDarkMode from '../../hooks/useDarkMode'
+import Switcher from 'react-switch'
 
-const Switch = () => {
-  return <button onClick={useDarkMode}>Switch</button>
+import useDarkMode from '../../hooks/useDarkMode'
+import THEME from '../../constants/theme'
+
+const Switch: React.FC = () => {
+  const [theme, toggleTheme] = useDarkMode()
+  return (
+    <Switcher
+      checked={theme && theme.title === THEME.DARK}
+      onChange={toggleTheme}
+      className="react-switch"
+    />
+  )
 }
 
 export default Switch

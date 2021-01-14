@@ -2,14 +2,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/auth'
 
 import { LayoutContext } from '../../context/layout'
+import useLoading from '../../hooks/useLoading'
 import { Container, Nav, Link, Icon, Button } from './styles'
 
 const NavLeft: React.FC = () => {
   const [auth, setAuth] = useContext(AuthContext)
   const [layout] = useContext(LayoutContext)
   const [activeClass, setActiveClass] = useState<string>('')
+  const [, setLoading] = useLoading()
 
   const logoutHandler = () => {
+    setLoading()
     setAuth({ ...auth, isAuth: false, token: '', profile: {} })
   }
 
@@ -20,11 +23,11 @@ const NavLeft: React.FC = () => {
   return (
     <Container className={activeClass}>
       <Nav>
-        <Link activeClassName="active" exact to="/home">
-          <Icon icon={['fab', 'phabricator']} />
-        </Link>
         <Link activeClassName="active" to="/dash">
           <Icon icon={['far', 'chart-bar']} />
+        </Link>
+        <Link activeClassName="active" to="/user">
+          <Icon icon={['far', 'angry']} />
         </Link>
         <Link activeClassName="active" to="/roles">
           <Icon icon={['fab', 'ups']} />

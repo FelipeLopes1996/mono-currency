@@ -8,9 +8,9 @@ const SignIn: React.FC<RouteComponentProps> = props => {
     <Container>
       <Nav>
         <Link to="/">Back </Link>
-        <Link to="/signup">Sign Up</Link>
+        <Link to="/signup">Sign In</Link>
       </Nav>
-      <Tittle>SignIn</Tittle>
+      <Tittle>Sign In</Tittle>
       <Form {...props} />
     </Container>
   )

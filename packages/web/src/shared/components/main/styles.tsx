@@ -6,6 +6,7 @@ export const Container = styled.section`
   padding-left: calc(var(--navleft-width-close) + 1rem);
   padding-bottom: var(--footer-height);
   transition: padding-left 0.6s cubic-bezier(0.2, 01, 0.22, 1);
+  overflow-x: hidden;
 
   &.open {
     padding-left: calc(var(--navleft-width-open) + 1rem);

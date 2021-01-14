@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ToastContainer } from 'react-toastify'
+
 import reportWebVitals from './reportWebVitals'
 import App from './App'
 import './shared/service/fontwesome'
+import 'react-toastify/dist/ReactToastify.css'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <ToastContainer />
   </React.StrictMode>,
   document.getElementById('root')
 )

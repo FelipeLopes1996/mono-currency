@@ -31,7 +31,7 @@ export const Line = styled.span`
   width: 2rem;
   height: 0.16rem;
   border-radius: 0.3rem;
-  background-color: ${props => props.theme.fg.light};
+  background-color: ${props => props.theme.fg.default};
   transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
 
   &:nth-of-type(1) {
